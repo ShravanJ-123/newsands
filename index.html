@@ -23,6 +23,16 @@
         .popup-section .modal-dialog.modal-dialog-centered {
             max-width: 500px !important;
         }
+        .banner-container {padding: 0;}
+        .banner-section {overflow: hidden;}
+        .videobanner {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;   /* fill width while limiting zoom */
+            display: block;
+            max-height: 90vh;
+        }
             </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17895689140"></script>
@@ -73,7 +83,7 @@
                 <img src="images/close.png" class="closemenu" alt="">
                 <div class="menu_in">
                     <div class="menu_logo">
-                        <img class="slide-menu-logo" src="images/nautilus.png">
+                        <img class="slide-menu-logo" src="images/builder-logo.png">
                     </div>
                     <ul class="asidebar">
                         <li><a href="#">HOME</a></li>
@@ -171,30 +181,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="banner-section">
         <div class="container-fluid banner-container">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="9000">
-                        <img src="images/slide1.jpeg" class="w-100 banner-img d-view" alt="Dosti Greenscapes Banner 1" fetchpriority="high" loading="eager">
-                        <img src="images/slide1.jpeg" class="w-100 banner-mobile m-view" alt="Dosti Greenscapes Banner 1" fetchpriority="high" loading="eager">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/slide2.jpeg" class="w-100 banner-img d-view" alt="Dosti Greenscapes Banner 2" loading="lazy">
-                        <img src="images/slide2.jpeg" class="w-100 banner-mobile m-view" alt="Dosti Greenscapes Banner 2" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/slide3.jpeg" class="w-100 banner-img d-view" alt="Dosti Greenscapes Banner 3" loading="lazy">
-                        <img src="images/slide3.jpeg" class="w-100 banner-mobile m-view" alt="Dosti Greenscapes Banner 3" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/slide4.jpeg" class="w-100 banner-img d-view" alt="Dosti Greenscapes Banner 4" loading="lazy">
-                        <img src="images/slide4.jpeg" class="w-100 banner-mobile m-view" alt="Dosti Greenscapes Banner 4" loading="lazy">
-                    </div>
-                </div>
-            </div>
+            <video class="videobanner" autoplay muted loop playsinline id="vid" preload="auto" poster="thumb-without-logo.png">
+                <source class="item" src="media/banner.mp4" type="video/mp4" media="(max-width: 768px)">
+                <source class="item" src="media/banner.mp4" type="video/mp4" media="(min-width: 769px)">
+                Your browser does not support the video tag.
+            </video>
 
             <div class="banner-text premium-animate">
-                <h1 class="headline">Dosti Greenscapes </h1>
-                <p class="subline">By Dosti Realty</p>
+                <h1 class="headline"> Hiranandani Sands </h1>
+                <p class="subline">225 acres coastal township </p>
                 <!-- <p class="subline">By Dosti Realty<br>Manifested by You</p> -->
             </div>
 
@@ -207,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="popup-form form_section bg-white p-3" style="max-width: 370px; position: relative;">
                     <p class="crose-btn">X</p>
                     <div class="popup-project-logo">
-                        <img class="img-fluid pb-0" src="images/nautilus.png" alt="">           
+                        <img class="img-fluid pb-0" src="images/builder-logo.png" alt="">           
                     </div>
                     <div class="form lower-form-part">
                         <form id="form2" class="enquiryForm" method="post" action="enquiry-form.php">
@@ -226,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <input type="checkbox" onclick="return false" checked="">
                             I authorize company representatives to Call, SMS, Email, or WhatsApp me aboutits products and offers. This consent overrides any registration for DNC/NDNC.
                         </div>
-                        <button class="submit_btn py-2 px-3 text-white border-0" id="SubmitQuery" style="background-color: #006c3a; ">Submit Now</button>
+                        <button class="submit_btn py-2 px-3 text-white border-0" id="SubmitQuery" style="background-color: var(--primary-dark); ">Submit Now</button>
                         </form>
                     </div>
                 </div>
@@ -238,25 +233,25 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="container-fluid banner-container">
             <div class="container banner-new-design">
                 
-                <!-- <img src="images/nautilus.png" class="banner_logo" alt="Prestige Nautilus"> -->
+                <!-- <img src="images/builder-logo.png" class="banner_logo" alt="Prestige Nautilus"> -->
                 
 
-                <h5 class="address"><span class="pro_location"><img src="images/location.webp" alt="">At Upper Camp, Pune</span></h5>
+                <h5 class="address"><span class="pro_location"><img src="images/location.webp" alt="">At Nagaon Beach, Alibaug</span></h5>
                 <!-- <h4 class="offer-banner">Land Area : 2 Acres</h4> -->
 
                 <div class="banner-details">
                     <div class="banner-status">
                         <h5>Nearing Possession</h5>
-                        <h4>Discount upto 2 Lakhs*</h4>
+                        <h4>EOI Window Open</h4>
                     </div>
                     <div class="banner-typology">
-                        <h5>Special discount for Defence People </h5>
-                        <h4 class="typo-detail">NO EMI till Possession</h4>
-                        <h4 class="typo-detail">30-70 payment plan</h4>
+                        <h5>1,50,000 Sq.ft Mega Clubhouse </h5>
+                        <h4 class="typo-detail">Exclusive Beachfront Access</h4>
+                        <!-- <h4 class="typo-detail">30-70 payment plan</h4> -->
                     </div>
                     <div class="banner-price">
-                        <h5>Luxurious 2, 3 & 4 BHK </h5>
-                        <h4 class="price-ban">₹ 86 Lacs Onwards*</h4>
+                        <h5>225 Acres Plots </h5>
+                        <h4 class="price-ban">₹ 2.65 Cr Onwards*</h4>
                     </div>
                 </div>
 
@@ -304,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="row ">
                     <div class="col-md-6">
                         <div class="highlight-image">
-                            <img src="images/highlight-image.jpeg" alt="" class="img-fluid">
+                            <img src="images/gal02.webp" alt="" class="img-fluid">
                             <p>Artistic Impression</p>
                         </div>
                     </div>
@@ -315,39 +310,39 @@ document.addEventListener("DOMContentLoaded", function () {
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
     </svg>
-                                    <p>8 Acre Premium Township </p>
+                                    <p>Clear & Well-Defined Plot Layouts  </p>
                                 </div>
                                 <div class="points">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
     </svg>
-                                    <p>12 High-Rise Towers (G+21 Floors)</p>
+                                    <p>Surrounded by Nature & Greenery</p>
                                 </div>
                                 <div class="points">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
     </svg>
-                                    <p>Spacious 2, 3 & 4 BHK Homes starting ₹86 Lakhs</p>
+                                    <p> Peaceful & Low-Density Environment </p>
                                 </div>
                                 <div class="points">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>750+ Trees & Podium Landscaped Gardens for a green lifestyle</p>
+    </svg>                                    <p> Well-Planned Internal Roads</p>
                                 </div>
                                 <div class="points">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>40+ World-Class Amenities & Twin Luxury Clubhouses</p>
+    </svg>                                    <p> Excellent Long-Term Growth Potential</p>
                                 </div>
                                 <div class="points">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Prime Hadapsar Location – Close to Magarpatta, SP Infocity & Amanora Mall</p>
+    </svg>                                    <p> India’s Top Beach Township with Private Watersports</p>
                                 </div>
                                 <div class="points">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Smart & Sustainable Living with solar power, rainwater harvesting & modern security
+    </svg>                                    <p> More Than 1 km of Pristine Beach Front
 </p>
                                 </div>
                                                                 <!-- <div class="points">
@@ -447,7 +442,7 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
         <div class="row justify-content-center g-4">
             
             <!-- Card 1: 4 BHK -->
-            <div class="col-12 col-md-4">
+            <!-- <div class="col-12 col-md-4">
                 <div class="plan-card">
                     <div class="image-container">
                         <img src="images/floorplan1.webp" alt="4 BHK Floor Plan" class="blur-effect">
@@ -470,27 +465,27 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Card 2: 5 BHK -->
             <div class="col-12 col-md-4">
                 <div class="plan-card">
                     <div class="image-container">
-                        <img src="images/floorplan2.webp" alt="5 BHK Floor Plan" class="blur-effect">
+                        <img src="images/floorplan2.webp" alt="1,500 - 5,000 sq.ft." class="blur-effect">
                         <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <span class="overlay-btn serif-font">Click to View Plan</span>
+                            <span class="overlay-btn serif-font">Click to View Price</span>
                         </div>
                     </div>
                     <div class="card-details">
                         <div>
-                            <span class="plan-title serif-font"><b>3 BHK</b></span>
-                            <div class="sqft-info">On Request (Carpet Area)</div>
+                            <span class="plan-title serif-font"><b>Plots</b></span>
+                            <div class="sqft-info">1500 - 3500 Sq.ft</div>
                         </div>
                         <div style="text-align: center;">
                             <div class="animated-price-btn">
                                 <a href="#" class="btn-inner" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <span class="start-text">Starting</span>
-                                    <span>₹ 1.51 Cr</span>
+                                    <span class="start-text">Get</span>
+                                    <span>Pricing</span>
                                 </a>
                             </div>
                         </div>
@@ -499,7 +494,7 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
             </div>
 
             <!-- Card 3: 6 BHK -->
-            <div class="col-12 col-md-4">
+            <!-- <div class="col-12 col-md-4">
                 <div class="plan-card">
                     <div class="image-container">
                         <img src="images/floorplan3.webp" alt="6 BHK Floor Plan">
@@ -522,7 +517,7 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
          </div>       
         </div>
     </div>
@@ -530,9 +525,9 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
     <style>
         /* CSS Variables based on original design */
         :root {
-            --primary-gold: #098b45;
-            --primary-bg: #f4fbf6;
-            --text-gray: #6d6d6d;
+            --primary-gold: #1e6fd9;
+            --primary-bg: #f2f7fd;
+            --text-gray: #5a6475;
         }
 
         body {
@@ -744,27 +739,7 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                                 <div class="content">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Cybercity Magarpatta </p>
-                                </div>
-                                <div class="distance">
-                                    <p>5 Mins</p>
-                                </div>
-                            </div>
-                            <div class="location-content">
-                                <div class="content">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
-        <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>MG Road</p>
-                                </div>
-                                <div class="distance">
-                                    <p>8 mins</p>
-                                </div>
-                            </div>
-                            <div class="location-content">
-                                <div class="content">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
-        <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>SP Infocity</p>
+    </svg>                                    <p>Alibaug City Centre  </p>
                                 </div>
                                 <div class="distance">
                                     <p>10 Mins</p>
@@ -774,10 +749,30 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                                 <div class="content">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Hadapsar Railway Station</p>
+    </svg>                                    <p>Revdanda Beach</p>
+                                </div>
+                                <div class="distance">
+                                    <p>10 Mins</p>
+                                </div>
+                            </div>
+                            <div class="location-content">
+                                <div class="content">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
+        <circle cx="12" cy="12" r="10"/>
+    </svg>                                    <p>Radcliffe School Alibaug</p>
                                 </div>
                                 <div class="distance">
                                     <p>12 Mins</p>
+                                </div>
+                            </div>
+                            <div class="location-content">
+                                <div class="content">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
+        <circle cx="12" cy="12" r="10"/>
+    </svg>                                    <p>Swami Vivekananda School </p>
+                                </div>
+                                <div class="distance">
+                                    <p> 10 Mins</p>
                                 </div>
                             </div>
 
@@ -785,10 +780,10 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                                 <div class="content">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Pune Railway Station</p>
+    </svg>                                    <p>Alibaug English High School </p>
                                 </div>
                                 <div class="distance">
-                                    <p>12 Mins</p>
+                                    <p>9 Mins</p>
                                 </div>
                             </div>
                             
@@ -796,30 +791,30 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                                 <div class="content">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Kalyani Nagar</p>
+    </svg>                                    <p>Civil Hospital Alibaug </p>
                                 </div>
                                 <div class="distance">
-                                    <p>15 Mins</p>
+                                    <p>10 Mins</p>
                                 </div>
                             </div>
                                                         <div class="location-content">
                                 <div class="content">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Koregaon park</p>
+    </svg>                                    <p>Sanjeevani Hospital  </p>
                                 </div>
                                 <div class="distance">
-                                    <p>12 Mins</p>
+                                    <p>11 Mins</p>
                                 </div>
                             </div>
                                                         <div class="location-content">
                                 <div class="content">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>WTC Kharadi</p>
+    </svg>                                    <p>Pen Railway Station</p>
                                 </div>
                                 <div class="distance">
-                                    <p>20 Mins</p>
+                                    <p>30 Mins</p>
                                 </div>
                             </div>
                             
@@ -828,10 +823,10 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                                 <div class="content">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#098b45" style="margin-right:10px;">
         <circle cx="12" cy="12" r="10"/>
-    </svg>                                    <p>Airport</p>
+    </svg>                                    <p>Alibaug Bus Stand </p>
                                 </div>
                                 <div class="distance">
-                                    <p>34 Mins</p>
+                                    <p>10 Mins</p>
                                 </div>
                             </div>
                         </div>
@@ -845,7 +840,7 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
                 <div class="col-md-5">
                     <div class="location-map-img" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         
-                        <img class="img-fluid" src="images/location-map.jpeg" alt="" >
+                        <img class="img-fluid" src="images/locmap2.jpg" alt="" >
                         
                     </div>
                 </div>
@@ -983,7 +978,7 @@ Surrounded by 750+ trees and podium gardens, the project blends modern urban liv
 
             </div>
             <div class="builder-logo">
-                <img class="img-fluid" src="images/nautilus.png" alt="">
+                <img class="img-fluid" src="images/builder-logo.png" alt="">
             </div>
             <div class="section-subheading dark-color">
                 <h4>Welcome To Dosti Realty</h4>
@@ -1163,7 +1158,7 @@ Its portfolio spans 10 million square feet across Mumbai
                         <div class="col-lg-12">
                             <div class="popup-form form_section">
                                 <div class="popup-project-logo">
-                                    <img class="img-fluid" src="images/nautilus.png" alt="...">
+                                    <img class="img-fluid" src="images/builder-logo.png" alt="...">
                                     
                                 </div>
                                 <div class="form lower-form-part">
